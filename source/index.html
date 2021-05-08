@@ -9,32 +9,25 @@
 <body>
   <header class="header">
     <div class="header__wrapper">
-
-        <a class="header__logo">
-          <img class="header__logo-image" src="img/logo-pink.svg" width="74" height="23" alt="PINK">
-        </a>
+      <a class="header__logo">
+        <img class="header__logo-image" src="img/logo-pink.svg" width="74" height="23" alt="PINK">
+      </a>
       <nav class="nav">
-        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="nav__list nav-menu">
-          <li class="nav-memu__item">
-            <a>
-              Главная
-            </a>
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="index.html">Главная</a>
           </li>
-          <li class="nav-memu__item">
-            <a href="photos.html">
-              Фотографии
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">Фотографии</a>
           </li>
-          <li class="nav-memu__item">
-            <a href="#">
-              Конкурс
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Конкурс</a>
           </li>
-          <li class="nav-memu__item">
-            <a href="#">
-              HTML Academy
-            </a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -45,18 +38,32 @@
     <h1 class="visually-hidden">Приложение Pink</h1>
 
     <section class="intro">
-      <h2 class="intro__slogan">Взгляните на жизнь иначе!</h2>
+      <h2 class="visually-hidden">Раздел загрузки приложения PINK</h2>
+      <p class="intro__slogan">Взгляните на жизнь иначе!</p>
       <a class="intro__button" href="#">Скачать приложение</a>
-      <div class="intro__stores">
-        <img src="img/apple-logo.svg" alt="логотип Apple">
-        <img src="img/android-logo.svg" alt="логотип Android">
-        <img src="img/microsoft-logo.svg" alt="логотип Microsoft">
-      </div>
-      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <ul class="intro__list dowload-list">
+        <li class="dowload-list__item">
+          <a href="https://www.apple.com/app-store/">
+            <span class="visually-hidden">Скачать в App Store</span>
+          </a>
+        </li>
+        <li class="dowload-list__item">
+          <a href="https://play.google.com/store/apps">
+            <span class="visually-hidden">Скачать в Google Play</span>
+          </a>
+        </li>
+        <li class="dowload-list__item">
+          <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+            <span class="visually-hidden">Скачать в Microsoft Store</span>
+          </a>
+        </li>
+      </ul>
+      <p class="intro__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
 
     <section class="features">
-      <h2 class="features__slogan">Устали от серости мегаполиса?</h2>
+      <h2 class="visually-hidden">Преимущества приложения</h2>
+      <p class="features__slogan">Устали от серости мегаполиса?</p>
       <p class="features__slogan">Нам есть, что вам предложить!</p>
       <ul class="features__list">
         <li class="features__item feature">
@@ -83,6 +90,16 @@
           </p>
         </li>
       </ul>
+    </section>
+
+    <section class="effect">
+      <h2 class="visually-hidden">Эффект от приложения</h2>
+      <div class="effect__description container">
+        <p class="effect__title">Эффект <span class="effect__title--position">на 24 часа!</span></з>
+          <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект <br> от
+            использования приложения длится целые сутки!</p>
+          <a class="effect__link" href="#">Узнать больше об исследовании</a>
+      </div>
     </section>
 
     <section class="reviews">
@@ -212,22 +229,21 @@
         </table>
       </div>
 
-      <div class="price__toggles">
-        <input class="price__input price__input--one" type="radio" id="btn-4" name="toggle-2">
-        <input class="price__input price__input--two" type="radio" id="btn-5" name="toggle-2" checked>
-        <input class="price__input price__input--three" type="radio" id="btn-6" name="toggle-2">
-        <label class="price__label" for="btn-4"></label>
-        <label class="price__label price__label--active" for="btn-5"></label>
-        <label class="price__label" for="btn-6"></label>
+      <p class="tariff__toggles slider__toggles">
+        <button class="slider__toggle slider__toggle--current" type="button">1</button>
+        <button class="slider__toggle" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </p>
       </div>
+
     </section>
 
     <section class="contacts">
       <h2>Остались вопросы? Свяжитесь с нами!</h2>
       <ul class="contacts__list">
         <li class="contacts__item contact">
-         <p class="contact__title">Звоните</b>
-         <tel class="contact__value">+7 (812) 555-66-66</tel>
+          <p class="contact__title">Звоните</b>
+            <tel class="contact__value">+7 (812) 555-66-66</tel>
         </li>
         <li class="contacts__item contact">
           <b class="contact__title">Пишите</b>
@@ -235,9 +251,7 @@
         </li>
         <li class="contacts__item contact">
           <p class="contact__title">Приезжайте в гости:</p>
-          <address class="contact__value">
-            ул. Большая Конюшенная, 19/8
-          </address>
+          <a class="info-list__address" href="https://yandex.ru/maps/-/CVTgZEpc">ул. Большая<br>Конюшенная, 19/8</a>
         </li>
       </ul>
       <div class="map">
